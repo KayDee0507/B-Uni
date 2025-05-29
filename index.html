@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Chat with B.uni – IBM Watson Assistant</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IBM Watson Assistant Chatbot</title>
 </head>
 <body>
-  <h1 style="text-align:center;">Welcome to B.uni – Student Support Chatbot</h1>
-  <p style="text-align:center;">Click the chat icon at the bottom right to begin.</p>
+  <h1 style="text-align: center;">Welcome to Our Chatbot Page</h1>
+  <p style="text-align: center;">Please use the chat icon in the bottom right corner to begin.</p>
 
   <script>
     window.watsonAssistantChatOptions = {
-      integrationID: "7bd73289-c1f6-4196-a47b-b9b0a967357a", // The ID of this integration.
-      region: "au-syd", // The region your integration is hosted in.
-      serviceInstanceID: "89599dfe-cdc3-416d-9bba-6107af026294", // The ID of your service instance.
+      integrationID: "7bd73289-c1f6-4196-a47b-b9b0a967357a", // Your integration ID
+      region: "au-syd", // Your region
+      serviceInstanceID: "89599dfe-cdc3-416d-9bba-6107af026294", // Your service instance ID
       onLoad: async (instance) => { await instance.render(); }
     };
     setTimeout(function(){
-      const t=document.createElement('script');
-      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      const t = document.createElement('script');
+      t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" +
+              (window.watsonAssistantChatOptions.clientVersion || 'latest') +
+              "/WatsonAssistantChatEntry.js";
       document.head.appendChild(t);
     });
   </script>
